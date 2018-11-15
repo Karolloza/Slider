@@ -42,9 +42,10 @@ document.addEventListener("DOMContentLoaded", function() {
 			countImages = 0;
 		}
 		displayedImage.src = imagesSrc[countImages];
+		// https://developer.mozilla.org/en-US/docs/Web/API/Element/animate
 		displayedImage.animate([
-			{ opacity: 0},
-			{ opacity: 1},
+			{ opacity: 0, transform: 'translateY(0px)' },
+			{ opacity: 1, transform: 'translateY(-300px)' },
 		], {
 			duration: 3000,
 		});
